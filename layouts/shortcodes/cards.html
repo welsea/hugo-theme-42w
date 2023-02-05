@@ -1,0 +1,23 @@
+<div class="card-group" style="gap:1em">
+    {{range .Site.Data.movies}}
+        <div class="card card-c" style="flex:0 0 30%; border: none;">
+            <div class="row-c">
+                <div class="col-c-1">
+                  <img src="{{.poster}}" class="img-fluid poster" alt="{{.title}}">
+                </div>
+                <div class="col-c-2">
+                    <div style="font-size: 1.2em;padding-right: 0.2em;"><a href="https://www.imdb.com/title/{{ .id }}"
+                        target="_blank"
+                        class="link-light card-title">{{ .title }}</a></div>
+                    <p class="card-text" style="color: white; font-size: 0.9em;padding-right: 0.2em;">
+                        {{ .rate }}
+                    </p>
+                </div>
+            </div>
+            <div class="card-body" style="background-color: #f4f7fa;">
+                <p class="card-text" style="font-size: 0.9em;">{{.comment}}</p>
+            </div>
+        </div>
+    {{end}}
+</div>
+

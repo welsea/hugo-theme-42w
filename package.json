@@ -1,0 +1,11 @@
+{
+    "name": "42w",
+    "scripts": {
+      "build": "node-sass --include-path node_modules theme.scss static/css/theme.scss",
+      "watch": "node-sass --watch --include-path node_modules theme.scss static/css/theme.scss"
+    },
+    "dependencies": {
+      "bootstrap": "^5.2.3",
+      "node-sass": "^8.0.0"
+    }
+  }

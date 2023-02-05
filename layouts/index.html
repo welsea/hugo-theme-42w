@@ -1,3 +1,40 @@
-<div style="margin: 0 auto; font-size: 20px;text-align: center; padding: 20% 0;">
-  Hello.
-</div>
+{{ define "main" }}
+  <div class="jumbotron">
+    <div class="container">
+      <p class="lead">{{ .Site.Params.Description }}</p>
+      {{ .Content }}
+    </div>
+  </div>
+
+
+  <div class="container">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") }}
+    {{ range $paginator.Pages }}
+      {{ $year := .Date.Year }}
+      {{ $lastYear := $.Scratch.Get "lastYear" }}
+      <div class="row mt-3">
+        <div class="d-none d-sm-block col-sm-2 offset-sm-2 text-end align-top">
+          {{ if ne $year $lastYear }}
+          <time></time>
+          {{else}}
+          <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          {{end}}
+        </div>
+        <div class="col txt-de">
+          {{ if ne $year $lastYear }}
+            <p class="text-muted mt-5">{{ $year }}</p>
+            {{ $.Scratch.Set "lastYear" $year }}
+          {{else}}
+            <a class="text-body p-title" href="{{ .Permalink | relURL }}">{{ if .Draft }}DRAFT: {{end}}{{ .Title | markdownify }}</a>
+            <br />
+            {{ range .Params.tags }}
+              <a class="text-muted fw-lighter fst-italic tags" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    {{ template "_internal/pagination.html" . }}
+  </div>
+{{ end }}
