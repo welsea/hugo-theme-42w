@@ -1,0 +1,9 @@
+<!-- 2-2 -->
+{{ $baseURL := .Site.BaseURL }}
+{{ $fileURL1 := print $baseURL ($.Get "file1") | absURL}}
+{{ $fileURL2 := print $baseURL ($.Get "file2") | absURL}}
+
+<div class="grouppic2">
+    <img src="{{$fileURL1}}" />
+    <img src="{{$fileURL2}}" /> 
+</div>

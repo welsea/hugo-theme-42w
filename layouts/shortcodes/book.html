@@ -1,6 +1,6 @@
 <div class="card-group" style="gap:1em;margin: 1em 0 2em;">
     {{ $file:= .Get "file"}}
-    {{ range (index .Site.Data.movies (.Get "file"))}}
+    {{ range (index .Site.Data.books (.Get "file"))}}
     <div class="card card-c" style="flex:0 0 30%; border: none;">
       <div class="row-c">
         <div class="col-c-1">
@@ -15,18 +15,18 @@
               >{{ .title }}</a
             >
           </div>
-          <p class="card-text" style="font-size: 0.9em;padding-right: 0.2em;">
+          <!-- <p class="card-text" style="font-size: 0.9em;padding-right: 0.2em;">
             <img
               src="/rate/{{ .rate }}.svg"
               class="rate-img"
               alt="{{.rate}}"
             />
-          </p>
+          </p> -->
         </div>
       </div>
-      <div class="card-body" style="background-color: #f4f7fa;">
+      <!-- <div class="card-body" style="background-color: #f4f7fa;">
         <p class="card-text" style="font-size: 0.9em;">{{ .comment }}</p>
-      </div>
+      </div> -->
     </div>
   {{ end }}
 </div>

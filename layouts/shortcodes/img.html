@@ -1,0 +1,3 @@
+{{ $baseURL := .Site.BaseURL }}
+{{ $fileURL := print $baseURL ($.Get "file") | absURL}}
+<img class="pic {{.Get `size`}}-pic" src="{{$fileURL}}" alt="{{.Get `info`}}"/>

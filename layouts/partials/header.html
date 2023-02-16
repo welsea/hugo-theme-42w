@@ -1,14 +1,14 @@
 <nav class="container">
     <h1 class="pt-md-5 display-3">
-      <a class="text-dark text-decoration-none" href="{{ "/"}}">{{.Site.Title}}</a>
+        <a class="text-dark text-decoration-none" href="{{ "/"}}">{{.Site.Title}}</a>
     </h1>
     <p class="list-a-c">
       {{ $currentPage := . }}
       {{- range .Site.Menus.main -}}
           {{ if eq (.URL | relLangURL ) $currentPage.RelPermalink -}}
-            {{ .Name }}
+          <span class="text-dark h4 mr-3 fw-light text-decoration-underline">{{ .Name }}</span>
           {{ else }}
-            <a class=" text-dark h4 mr-3 fw-light" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            <a class="text-dark h4 mr-3 fw-light" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           {{ end }}
       {{- end -}}
     </p>

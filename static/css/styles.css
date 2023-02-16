@@ -1,16 +1,35 @@
+h2,h3,h4{
+    margin-top: 1em !important;
+}
+
+blockquote{
+    background: #ecf0f4;
+    padding: 0.5em 1em;
+    color: #4e6585;
+    border-radius: 3px;
+}
+
+blockquote p{
+    margin-bottom: 0;
+}
+
+.article p:first-child{
+    font-size: 1em !important;
+    font-weight: normal !important;
+    max-width: 45em !important;  
+}
 .pagination_item_current a{
     background: #dfdfdf;
     color: white;
 }
 .page-link{
-    color:black;
+    color:#6982a7 !important;
 }
 .navgt{
     margin: 0 auto;
     width: fit-content;
     padding-top: 4em;
 }
-
 .cus-f{
     font-size: 0.85em;
     text-align: center;
@@ -52,10 +71,16 @@
 .row-c{
     display: flex;
     justify-content: space-between;
-    text-align: right;
+    /* text-align: right; */
     /* background-color: #737f90; */
     border: 1px solid #ecedee;
     height: 150px;
+    padding-right:1em;
+}
+
+.col-c-1{
+    max-width: 40%;
+    padding-right: 1em;
 }
 
 .col-c-2{
@@ -63,6 +88,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    text-align: right;
+    padding: 0.1em 0;
 }
 
 .nex-prev{
@@ -77,15 +104,58 @@
 
 .rate-img{
     width: 50px;
-    margin:1em
+    /* margin:1em */
+    filter: invert(33%) sepia(74%) saturate(365%) hue-rotate(162deg) brightness(100%) contrast(94%);
+}
+.card-title-box{
+    font-size: 1.2em;
+    padding-right: 0.2em;
 }
 
 @media only screen and (max-width: 600px) {
     .rate-img{
-        width: 40px;
+        width: 2em;
     }
     .row-c{
         height: 100px;
         width: auto;
     }
+    .card-title-box{
+        font-size: 1em;
+        padding-right: 0.2em;
+    }
 }
+
+pre{
+    padding: 1em 0.5em;
+}
+
+.grouppic2{
+    width: 80%;
+}
+.grouppic2 img{
+    width: 45%;
+}
+
+.pic{
+    width: 100%;
+    padding: 0.5em;
+}
+.small-pic{
+    width: 50% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tags{
+    padding: 3em 2em;
+}
+.tags span{
+    padding-right: 1em;
+}
+.row>* {
+    padding-top: calc(var(--bs-gutter-x) * .5) !important;
+}
+
+

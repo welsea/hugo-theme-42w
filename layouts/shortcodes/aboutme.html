@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="aboutme">
+                <img src="/icons/profile.png" class="mr-3 img-fluid u-photo profile-img">
+                <div class="about-text">
+                    <p>
+                       About me
+                    </p>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.aboutme{
+    padding: 1em;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.2em;
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+}
+
+.profile-img{
+    height: -webkit-fill-available;
+    border-radius: 1em;
+    max-height: 12em;
+}
+
+.about-text{
+    flex:1;
+    padding: 0 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .aboutme{
+        display: block !important;
+    }
+    .aboutme img{
+        margin: auto !important;
+        display: block;
+        padding-bottom: 1em;
+    }
+}
+</style>

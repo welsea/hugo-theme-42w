@@ -3,17 +3,20 @@
   <h1 class="text-center">
     {{ .Name | humanize }}
   </h1>
+
   {{ if eq .Kind "taxonomy" }}
-    {{ range $.Site.Taxonomies.categories.ByCount }}
+    <div class="cate">
+      {{ range $.Site.Taxonomies.categories.ByCount }}
       <div class="row mt-2">
-        <div class="d-none d-sm-block col-sm-2 mt-auto offset-sm-2 text-right">
-           {{ .Count }} Articles
+        <div class="d-none d-sm-block col-sm-2 mt-auto offset-sm-2 text-end">
+          {{ .Count }} Articles in
         </div>
         <div class="col">
-          <a class="text-body" href="/tags{{ .Name | relURL }}">{{ .Name | markdownify }}</a>
+          <a class="text-body" href="/categories{{ .Name | relURL }}">{{ .Name | markdownify }}</a>
         </div>
       </div>
     {{ end }}
+    </div>
   {{ else }}
     {{ $dateFormat := default "Jan 2" (index .Site.Params "date_format") }}
     {{ $.Scratch.Set "lastYear" ""}}
@@ -34,6 +37,5 @@
       </div>
     {{ end }}
   {{ end }}
-
 </div>
 {{ end }}
