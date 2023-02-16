@@ -1,8 +1,7 @@
 ## Hugo theme - 42w
 Demo: https://blog.welsea.site/
 
-This theme is based on [Building a hugo site and theme with Bootstrap](https://willschenk.com/articles/2018/building-a-hugo-site/).
-[Hugo Easy Gallery](https://www.liwen.id.au/heg/)
+This theme is based on [Building a hugo site and theme with Bootstrap](https://willschenk.com/articles/2018/building-a-hugo-site/) and [Hugo Easy Gallery](https://www.liwen.id.au/heg/)
 
 
 ### Features
