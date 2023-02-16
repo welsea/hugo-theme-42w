@@ -26,7 +26,7 @@ content
     │   firs-post.md
     │   second-post.md
 ````
-2. Add the shortcodes for gallery in `index.md`. Other setting see [Hugo Easy Gallery](https://www.liwen.id.au/heg/).
+2. Add the shortcodes for gallery in `index.md`. Other settings see [Hugo Easy Gallery](https://www.liwen.id.au/heg/).
 ````
 {{< gallery dir="photos/gallery1" />}} {{< load-photoswipe >}}
 ````
